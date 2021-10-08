@@ -35,6 +35,7 @@ import java.util.Random;
             while (guess != num);
         }
 
+//calling a method which created above
 
         public static void main(String[] args) {
 
