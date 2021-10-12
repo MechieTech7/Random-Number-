@@ -1,8 +1,12 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
 
     public class RandomGuesser {
-//creating method
+        private static String guess;
+
+        //creating method
         public static void guessgame() {
 
 
@@ -34,11 +38,21 @@ import java.util.Random;
             }
             while (guess != num);
         }
-
-//calling a method which created above
-
+        static void CreatingFile(){
+            try {
+                FileWriter fileWriter = new FileWriter("StoredOutput.txt");
+                fileWriter.write("Guessed Random Number is: " + guess );
+                fileWriter.close();
+                System.out.println("the Output is stored successfully ");
+            }catch (IOException e)
+                {
+                    System.out.println("Notification = File is not created.");
+            }
+        }
+//Creating main method and calling the method created above
         public static void main(String[] args) {
 
             guessgame();
+            CreatingFile();
         }
     }
