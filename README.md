@@ -7,7 +7,7 @@ If the user’s guess is lower than the random number, the program should displa
 
 The program should use a loop that repeats until the user correctly guesses the random number. 
 
-Finally store that number in a file with a keyword "Guessed random number": here_number.
+Finally display that number in a file with a keyword "Guessed random number": here_number.
 
 Additionally i did that how many guesses it tooks to find actual random number.
 
